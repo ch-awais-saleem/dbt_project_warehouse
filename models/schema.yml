@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    database: DAP_DB
+    schema: raw
+    tables:
+      - name: orders_raw
+      - name: customers_raw
+
+models:
+  - name: stg_orders
+    tests:
+      - unique:
+          column_name: order_id
+  - name: stg_customers
+    tests:
+      - unique:
+          column_name: customer_id
