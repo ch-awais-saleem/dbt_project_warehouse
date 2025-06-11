@@ -1,9 +1,9 @@
 SELECT
-    o.order_id,
-    o.customer_id,
-    c.name,
-    o.order_date,
-    o.total_amount
-FROM {{ ref('stg_orders') }} o
-JOIN {{ ref('stg_customers') }} c
-  ON o.customer_id = c.customer_id
+    O.ORDER_ID,
+    O.CUSTOMER_ID,
+    C.NAME,
+    O.ORDER_DATE,
+    O.TOTAL_AMOUNT
+FROM {{ ref('stg_orders') }} O
+JOIN {{ ref('stg_customers') }} C
+  ON O.CUSTOMER_ID = C.CUSTOMER_ID

@@ -1,6 +1,6 @@
 SELECT
-    customer_id,
-    name,
-    email,
-    signup_date
+    CUSTOMER_ID,
+    NAME,
+    EMAIL,
+    SIGNUP_DATE
 FROM {{ source('raw', 'customers_raw') }}

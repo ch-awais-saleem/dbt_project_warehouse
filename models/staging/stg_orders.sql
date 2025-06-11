@@ -1,6 +1,6 @@
 SELECT
-    order_id,
-    customer_id,
-    order_date,
-    total_amount
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    TOTAL_AMOUNT
 FROM {{ source('raw', 'orders_raw') }}
